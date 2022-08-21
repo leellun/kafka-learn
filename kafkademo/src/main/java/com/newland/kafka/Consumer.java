@@ -21,7 +21,7 @@ public class Consumer implements Runnable {
 
     public Consumer(String topicName) {
         Properties props = new Properties();
-        props.put("bootstrap.servers", "192.168.10.103:9092");
+        props.put("bootstrap.servers", "192.168.66.11:9092");
         props.put("group.id", GROUPID);
         props.put("enable.auto.commit", "true");
         props.put("auto.commit.interval.ms", "1000");

@@ -6,7 +6,6 @@
     <groupId>com.newland</groupId>
     <artifactId>kafkademo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.newland</groupId>
         <artifactId>kafka-examples</artifactId>
