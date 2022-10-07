@@ -22,7 +22,7 @@ public class Producer {
 
         KafkaProducer<String,String> kafkaProducer=new KafkaProducer<String, String>(properties);
         for(int i=0;i<5;i++){
-            kafkaProducer.send(new ProducerRecord<>("first", "helloworld " + i), new Callback() {
+            kafkaProducer.send(new ProducerRecord<>("first2", "helloworld " + i), new Callback() {
                 @Override
                 public void onCompletion(RecordMetadata recordMetadata, Exception e) {
                     System.out.println("分区:"+recordMetadata.partition());

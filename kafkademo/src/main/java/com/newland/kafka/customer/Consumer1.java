@@ -29,7 +29,7 @@ public class Consumer1 {
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
 
         // 配置消费者组id
-        properties.put(ConsumerConfig.GROUP_ID_CONFIG, "test5");
+        properties.put(ConsumerConfig.GROUP_ID_CONFIG, "test0");
 
         // 设置分区分配策略
         properties.put(ConsumerConfig.PARTITION_ASSIGNMENT_STRATEGY_CONFIG, "org.apache.kafka.clients.consumer.StickyAssignor");
@@ -37,7 +37,7 @@ public class Consumer1 {
         KafkaConsumer<String, String> kafkaConsumer = new KafkaConsumer<String, String>(properties);
 
         ArrayList<String> topics = new ArrayList<>();
-        topics.add("first");
+        topics.add("first2");
         kafkaConsumer.subscribe(topics);
         while (true) {
             ConsumerRecords<String, String> consumerRecords = kafkaConsumer.poll(Duration.ofSeconds(1));
